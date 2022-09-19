@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPE2</title>
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="./vista/css/main.css" rel="stylesheet" type="text/css">
@@ -22,7 +22,7 @@
    ?>
     <section>
  
-    <form id="formIngresarClientes" class="mx-5 p-3" method="POST" action="./controlador/registroclientes.php">
+    <form id="formIngresarClientes" class="mx-5 p-3">
             <h3 style="text-align:center">Datos Personales</h3>
             <table id="tablaIngresarClientes">
                 <tr>
@@ -46,7 +46,7 @@
                         <label for="rut" class="form-label">Ingrese Rut</label>
                     </td>
                     <td>
-                    <input type="text" class="form-control" id="rutCliente" name="rutCliente">
+                    <input type="text" class="form-control" id="nombreCliente" name="rutCliente">
                     </td>
                 </tr>
                 <tr>

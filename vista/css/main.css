@@ -19,6 +19,11 @@
     width: 100%;
 }
 
+#tablaMostrar th {
+    background-color: #006CB7 !important;
+    text-align: center;
+}
+
 #menu {
     background-color: #006CB7 !important;
     width: 100% !important;
@@ -40,10 +45,33 @@
         background-color: #006CB7 !important;
         width: 100% !important;
     }
+    .table {
+        padding: 0px;
+        zoom: 68%;
+    }
+    #tablaMostrar th {
+        height: 60px;
+        width: auto;
+        padding: 0px;
+        padding-bottom: 40px;
+    }
 }
 
 @media (max-with:768px) {
     #formIngresarClientes {
         margin: auto !important;
     }
+    .table {
+        padding: 0px;
+        zoom: 68%;
+    }
+    #tablaMostrar th {
+        height: 60px;
+        width: auto;
+        padding: 0px;
+        padding-bottom: 40px;
+    }
+}
+
+
 }

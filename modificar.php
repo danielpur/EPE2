@@ -19,18 +19,21 @@
     </header>
    <?php
    include './vista/modulos/navegacion.php';
+
+
    ?>
     <section>
  
-    <form id="formIngresarClientes" class="mx-5 p-3" method="POST" action="./controlador/registroclientes.php">
-            <h3 style="text-align:center">Registrar Datos Personales</h3>
+    <form id="formIngresarClientes" class="mx-5 p-3" method="POST" action="./controlador/actualizacionclientes.php">
+        
+            <h3 style="text-align:center">Actualizar Datos Personales</h3>
             <table id="tablaIngresarClientes">
                 <tr>
                     <td>
                         <label for="nombre" class="form-label">Ingrese Nombre</label>
                     </td>
                     <td>
-                        <input type="text" class="form-control" id="nombreCliente" name="nombreCliente">
+                        <input type="text" class="form-control" id="nombreCliente" name="nombreCliente" value="<?php echo $_POST['nombre'];?>">
                     </td>
                 </tr>
                 <tr>
@@ -38,7 +41,7 @@
                         <label for="apellido" class="form-label">Ingrese Apellido</label>
                     </td>
                     <td>
-                    <input type="text" class="form-control" id="apellidoCliente" name="apellidoCliente">
+                    <input type="text" class="form-control" id="apellidoCliente" name="apellidoCliente" value="<?php echo $_POST['apellido'];?>">
                     </td>
                 </tr>
                 <tr>
@@ -46,7 +49,7 @@
                         <label for="rut" class="form-label">Ingrese Rut</label>
                     </td>
                     <td>
-                    <input type="text" class="form-control" id="rutCliente" name="rutCliente">
+                    <input type="text" class="form-control" id="rutCliente" name="rutCliente" value="<?php echo $_POST['rut'];?>">
                     </td>
                 </tr>
                 <tr>
@@ -55,7 +58,7 @@
                     </td>
                     <td>
                     <select class="form-select" aria-label="Default select example" id="seguroCliente" name="seguroCliente">
-                            <option selected>Seguros</option>
+                            <option selected><?php echo $_POST['seguro'];?></option>
                             <option value="Seguros Hogar">Seguros Hogar</option>
                             <option value="Seguros Automóvil">Seguros Automóvil</option>
                             <option value="Seguros Accidentes">Seguros Accidentes</option>
@@ -67,13 +70,14 @@
                         <label for="edad" class="form-label">Ingrese Edad</label>
                     </td>
                     <td>
-                    <input type="text" class="form-control" id="edadCliente" name="edadCliente">
+                    <input type="text" class="form-control" id="edadCliente" name="edadCliente" value="<?php echo $_POST['edad'];?>">
                     </td>
                 </tr>
            
             </table>
             <br>
-            <button id="btnIngresarClientes" type="submit" class="btn btn-success">Registrar Cliente</button>
+            <input type="hidden" name="idClientes" value="<?php echo $_POST['idClientes'];?>">
+            <button id="btnIngresarClientes" type="submit" class="btn btn-success">Actualizar Cliente</button>
         </form>
     
     

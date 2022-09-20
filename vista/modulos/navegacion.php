@@ -14,9 +14,6 @@
                         <a class="nav-link" href="mostrar.php">Ver Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hoteles.html">Hoteles</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="centrodeayuda.html">Centro de ayuda</a>
                     </li>
                     <li class="nav-item">

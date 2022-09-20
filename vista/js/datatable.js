@@ -2,7 +2,6 @@ $(document).ready(function() {
 
     //Only needed for the filename of export files.
     //Normally set in the title tag of your page.
-    document.title = 'Epe2';
     // DataTable initialisation
     $('#tablaMostrar').DataTable({
         "dom": '<"dt-buttons"Bf><"clear">lirtp',
@@ -17,4 +16,5 @@ $(document).ready(function() {
             'print'
         ]
     });
+
 });

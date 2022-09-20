@@ -28,7 +28,6 @@ class Conexion{
 
         ];
         $pdo = new PDO($connection, $this->user, $this->clave, $options);
-        print_r('Conectado');
         return $pdo;
     }catch(PDOException $e){
         print_r('Error connection:'.$e->getMessage());

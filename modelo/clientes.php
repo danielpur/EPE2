@@ -38,7 +38,7 @@ class Clientes
             $conectar = $conexion->conectar();
             $query = $conectar->prepare('SELECT * FROM clientes');
             $query->execute();
-            echo '<table id="tablaMostrar" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            echo '<table id="tablaMostrar" class="table table-striped table-bordered" cellspacing="0">
             <thead>
 		<tr>
 			<th>Nombre</th>
@@ -67,16 +67,16 @@ class Clientes
                 <input type="hidden" name="seguro" value="' . $row["seguro"] . '">
                 <input type="hidden" name="edad" value="' . $row["edad"] . '">
 
-                <button id="btnActualizarCliente" type="submit" class="btn btn-warning">Actualizar</button>   
+                <input name="submit" type="image" src="./vista/img/pencil-square.svg">            
                 </form>
                 </td>
                 <td style="text-align:center">
                 
                 <form method="POST" action="./controlador/eliminacionClientes.php">
                 <input type="hidden" name="rutEliminar" value="' . $row["rut"] . '">
-                <button id="btnEliminarCliente" type="submit" class="btn btn-danger">Eliminar</button>
+                <input name="submit" type="image" src="./vista/img/backspace-reverse-fill.svg">            
                 </form>
-                
+                    
                 </td>
             </tr>';
             }

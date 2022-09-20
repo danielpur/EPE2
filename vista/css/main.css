@@ -1,4 +1,5 @@
 #formIngresarClientes {
+    margin-top: 15px !important;
     margin: auto;
     border: 1px solid black;
     background-image: linear-gradient(-0deg, #006CB7, #43B2FF) !important;
@@ -13,9 +14,31 @@
     width: 100%;
 }
 
+#tablaMostrar {
+    text-align: center;
+    width: 100%;
+}
+
+#menu {
+    background-color: #006CB7 !important;
+    width: 100% !important;
+}
+
+#menu a {
+    color: white !important;
+}
+
+#menu a:hover {
+    color: gray !important;
+}
+
 @media (max-width: 576px) {
     #formIngresarClientes {
         margin: auto !important;
+    }
+    #menu {
+        background-color: #006CB7 !important;
+        width: 100% !important;
     }
 }
 

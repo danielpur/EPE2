@@ -16,7 +16,7 @@ $edad = $_POST['edadCliente'];
 
 $clientes = new Clientes();
 $clientes->registrarCliente($nombre,$apellido,$rut,$seguro,$edad);
-header("Location: ../index.php");
+header("Location: ../mostrar.php");
 }
 
 ?>

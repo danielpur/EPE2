@@ -70,7 +70,13 @@ class Clientes
                 <button id="btnActualizarCliente" type="submit" class="btn btn-warning">Actualizar</button>   
                 </form>
                 </td>
-                <td style="text-align:center"><button id="btnEliminarCliente" type="submit" class="btn btn-danger">Eliminar</button>
+                <td style="text-align:center">
+                
+                <form method="POST" action="./controlador/eliminacionClientes.php">
+                <input type="hidden" name="rutEliminar" value="' . $row["rut"] . '">
+                <button id="btnEliminarCliente" type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+                
                 </td>
             </tr>';
             }
@@ -81,7 +87,6 @@ class Clientes
 
     public function actualizarCliente($idClientes,$nombre, $apellido, $rut, $seguro, $edad)
     {
-        echo "Query ejecutada";
 
         try {
             //CONECTAR BASE DE DATOS Y EJECUTAR QUERY
@@ -103,6 +108,22 @@ class Clientes
                 'rut' => $rut,
                 'seguro' => $seguro,
                 'edad' => $edad
+            ]);
+        } catch (Exception $e) {
+            echo 'ERROR' . $e;
+        }
+    }
+
+    public function eliminarCliente($rut)
+    {
+
+        try {
+            //CONECTAR BASE DE DATOS Y EJECUTAR QUERY
+            include_once '../conexion/conexion.php';
+            $conexion = new Conexion();
+            $query = $conexion->conectar()->prepare('DELETE FROM clientes  WHERE rut = :rut');
+            $query->execute([
+                'rut' => $rut
             ]);
         } catch (Exception $e) {
             echo 'ERROR' . $e;

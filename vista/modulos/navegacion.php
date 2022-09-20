@@ -13,12 +13,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="mostrar.php">Ver Clientes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="centrodeayuda.html">Centro de ayuda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
                 </ul>
             </div>
         </div>
